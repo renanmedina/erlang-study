@@ -1,5 +1,5 @@
 -module(learning).
--export([double/1, factorial/1, convert/2, sum/1, list_length/1, avg/1]).
+-export([double/1, factorial/1, convert/2, sum/1, list_length/1, avg/1, list_max/1]).
 
 double(NUM) ->
   2 * NUM.
@@ -30,3 +30,13 @@ avg([]) ->
   0;
 avg(LIST) ->
   sum(LIST) / list_length(LIST).
+
+list_max([Head|Rest]) ->
+  list_max(Rest, Head).
+
+list_max([], Last) -> 
+  Last;
+list_max([Head|Rest], Biggest) when Head > Biggest ->
+  list_max(Rest, Head);
+list_max([_|Rest], Biggest) ->
+  list_max(Rest, Biggest).
