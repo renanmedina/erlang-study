@@ -1,4 +1,4 @@
--module(temperatures).
+-module(temperature).
 -export([convert/2]).
 
 convert(FAH, celsius) ->
