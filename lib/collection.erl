@@ -1,5 +1,5 @@
 -module(collection).
--export([sum/1, list_length/1, avg/1, list_max/1]).
+-export([sum/1, list_length/1, avg/1, list_max/1, reverse/1]).
 
 list_length([]) ->
   0;
@@ -18,10 +18,16 @@ avg(LIST) ->
 
 list_max([Head|Rest]) ->
   list_max(Rest, Head).
-
 list_max([], Last) -> 
   Last;
 list_max([Head|Rest], Biggest) when Head > Biggest ->
   list_max(Rest, Head);
 list_max([_|Rest], Biggest) ->
   list_max(Rest, Biggest).
+
+reverse(List) -> 
+  reverse(List, []).
+reverse([Head | Rest], ListReversed) ->
+  reverse(Rest, [Head | ListReversed]);
+reverse([], ListReversed) ->
+  ListReversed.

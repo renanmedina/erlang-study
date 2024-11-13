@@ -15,6 +15,7 @@ start() ->
   io:fwrite("measures sum is ~w\n", [collection:sum(MEASURES)]),
   io:fwrite("measures average is ~w\n", [collection:avg(MEASURES)]),
   io:fwrite("biggest measure is ~w\n", [collection:list_max(MEASURES)]),
+  io:fwrite("measures reversed is ~w\n", [collection:reverse(MEASURES)]),
   XGH_COLOR = color:new(253, 186, 116, 1),
   io:fwrite("XGH Color map is ~w\n", [XGH_COLOR]),
   io:fwrite("128ºF in celsius is ~w\n", [temperature:convert(128, celsius)]),
