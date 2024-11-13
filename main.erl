@@ -15,4 +15,6 @@ start() ->
   io:fwrite("measures sum is ~w\n", [learning:sum(MEASURES)]),
   io:fwrite("measures average is ~w\n", [learning:avg(MEASURES)]),
   XGH_COLOR = color:new(253, 186, 116, 1),
-  io:fwrite("XGH Color map is ~w\n", [XGH_COLOR]).
+  io:fwrite("XGH Color map is ~w\n", [XGH_COLOR]),
+  io:fwrite("128ºF in celsius is ~w\n", [temperatures:convert(128, celsius)]),
+  io:fwrite("128ºC in fahrenheit is ~w\n", [temperatures:convert(128, fahrenheit)]).
